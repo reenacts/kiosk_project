@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-   //    while (true) {
+        while (true) {
 
             System.out.println("[ SHAKESHACK MENU ]");
             System.out.println("1. ShackBurger   | W 6.9 | 토마토, 양상추, 쉑소스가 토핑된 치즈버거");
@@ -16,6 +16,11 @@ public class Main {
             System.out.println("0. 종료      | 종료");
 
             int selection = scanner.nextInt();
+
+            if (selection == 0) {
+                System.out.println("프로그램을 종료합니다.");
+                break;
+            }
 
             switch (selection) {
                 case 1:
@@ -30,14 +35,12 @@ public class Main {
                 case 4:
                     System.out.println("4. Hamburger     | W 5.4 | 비프패티를 기반으로 야채가 들어간 기본버거");
                     break;
-
-                case 0:
-                    System.out.println("프로그램을 종료합니다.");
-                    break;
+                default:
+                    System.out.println("올바른 번호를 입력해 주세요!");
             }
 
 
-    //    }
+        }
 
     }
 }
